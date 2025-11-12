@@ -1,0 +1,163 @@
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(135deg, #f7f7f7, #e7e7e7);
+    padding: 40px 0;
+    font-family: "Inter", system-ui, sans-serif;
+    color: #222;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.main-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.add-book-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+    width: 90%;
+    max-width: 800px;
+}
+
+.add-book-form input {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1.5px solid #ccc;
+    background: #fff;
+    font-size: 1rem;
+    outline: none;
+    color: #222;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.add-book-form input:focus {
+    border-color: #007bff;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.add-book-form button {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.add-book-form button:hover {
+    background-color: #333;
+}
+
+.book-list {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px 5%;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+}
+
+.book-list h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.book-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    color: #444;
+    font-size: 1rem;
+}
+
+.book-list li {
+    margin-bottom: 8px;
+}
+
+.book-list button {
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.book-list button:hover {
+    background-color: #333;
+}
+
+.summary-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px 5%;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+    animation: fadeIn 0.6s ease-in-out;
+    box-sizing: border-box;
+}
+
+.summary-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.summary-card p {
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .book-list, .summary-card {
+        padding: 30px 6%;
+    }
+
+    .add-book-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .add-book-form input {
+        width: 100%;
+    }
+}
