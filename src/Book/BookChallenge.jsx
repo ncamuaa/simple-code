@@ -3,13 +3,19 @@ import "./BookChallenge.css"
 
 export default function BookChallenge() {
     /**
-     * 🧠 Challenge Instructions:
-     *
-     * 1️⃣ Create a state variable called `summary` (string, default empty "")
-     * 2️⃣ Create a ref called `summarySection` using `useRef()`
-     * 3️⃣ Use `useEffect()` so that whenever `summary` changes,
-     *     it automatically scrolls the summary section into view.
-     *     👉 Tip: use `summarySection.current.scrollIntoView({ behavior: "smooth" })`
+     * 🧠 Challenge:
+     * 
+     * 1️⃣ Create state for:
+     *     - `books` (array of book titles)
+     *     - `summary` (string)
+     *     - `typedText` (string for typing animation)
+     * 
+     * 2️⃣ Create a ref called `summarySection` using useRef().
+     * 
+     * 3️⃣ Use useEffect() to make a typing effect:
+     *     - When `summary` changes, type out one character at a time.
+     * 
+     * 4️⃣ Use another useEffect() to scroll into view when the summary changes.
      */
 
     // 🧩 Your code here 👇
@@ -19,16 +25,30 @@ export default function BookChallenge() {
         <main className="main-container">
             <h1>📖 React Hooks Challenge</h1>
             <p className="subtitle">
-                Focus: <strong>useState</strong>, <strong>useEffect</strong>, <strong>useRef</strong>, and <strong>scrollIntoView()</strong>
+                Using <strong>useState</strong>, <strong>useEffect</strong>, <strong>useRef</strong>, and <strong>scrollIntoView()</strong>
             </p>
 
-           
-            <button>Generate Summary</button>
+            <form className="add-book-form">
+                <input
+                    type="text"
+                    name="book"
+                    placeholder="Enter a new book..."
+                />
+                <button type="submit">Add Book</button>
+            </form>
 
-           
-            <section className="summary-card">
-                <h2>📘 Summary Section</h2>
-                <p>Click "Generate Summary" above 👆</p>
+            <section className="book-list">
+                <h2>Your Reading List 📚</h2>
+                <ul>
+                    <li>Example Book</li>
+                </ul>
+
+                <button>Get AI Summary</button>
+
+                <section className="summary-card">
+                    <h2>📘 Summary Section</h2>
+                    <p>Click "Get AI Summary" above 👆</p>
+                </section>
             </section>
         </main>
     )
